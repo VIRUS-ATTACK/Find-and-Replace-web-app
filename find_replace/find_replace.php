@@ -9,7 +9,7 @@
         $replace = $_POST['replacewith'];
         $new_userinput = strtolower($user_input);
         if(!empty($user_input) && !empty($search) && !empty($replace)){
-            $new_str = str_replace($search,$replace,$new_userinput);
+            $new_str = str_ireplace($search,$replace,$new_userinput);
         }
         else{
             $flag = 'Please fill in all fields.';
