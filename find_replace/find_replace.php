@@ -7,7 +7,7 @@
         $user_input = $_POST['user_input'];
         $search = $_POST['searchfor'];
         $replace = $_POST['replacewith'];
-        $new_userinput = str_ireplace($find,$replace_with,$user_input);
+        $new_userinput = strtolower($user_input);
         if(!empty($user_input) && !empty($search) && !empty($replace)){
             $new_str = str_replace($search,$replace,$new_userinput);
         }
